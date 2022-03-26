@@ -4,7 +4,8 @@
 6, 1, 33 -> [6, 1, 33]
 */
 
-Вариант 1
+//Вариант 1
+/*
 Console.WriteLine("Введите кол-во символов в массиве");
 int size = Convert.ToInt32(Console.ReadLine());
 int newNumber = 0;
@@ -12,4 +13,21 @@ for (int i = 0; i < size; i++)
 {
    newNumber = new Random().Next(-100,100);
    Console.Write($"{newNumber}, ");
+}
+*/
+
+Console.WriteLine("Введите кол-во символов в массиве");
+int size = Convert.ToInt32(Console.ReadLine());
+int newNumber = 0;
+
+SetArray();
+
+void SetArray()
+{
+   Random rnd = new Random();
+   for (int i = 0; i < size; i++)
+   {
+      newNumber = rnd.Next(-100,100);
+      Console.Write($"{newNumber}, ");
+   }
 }

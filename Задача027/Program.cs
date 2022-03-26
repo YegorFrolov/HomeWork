@@ -21,6 +21,7 @@ sum = numstr.Sum(i => i - '0');
 Console.WriteLine(sum);
 */
 
+/*
 Console.WriteLine("Введите любое число: ");
 string num = Convert.ToString(Console.ReadLine());
 int sum = 0;
@@ -31,3 +32,16 @@ for (int i = 0; i < num.Length; i++)
     sum += number;
 }
 Console.WriteLine(sum);
+*/
+
+Console.WriteLine("Введите любое число: ");
+int num = Convert.ToInt32(Console.ReadLine());
+int sum = 0;
+
+while (num > 0)
+{
+    sum += num % 10;
+    num /= 10;
+}
+Console.WriteLine(sum);
+
