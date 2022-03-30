@@ -21,7 +21,7 @@ void SetArray()
    }
 }
 
-void Chet ()
+void Chet()
 {
     int count = 0;
     Console.WriteLine(" ");
