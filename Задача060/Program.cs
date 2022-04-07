@@ -4,43 +4,49 @@
 */ 
 
 Console.Clear();
-System.Console.Write("Введите колличество строк:");
+Console.Write("Введите колличество строк:");
 int row = Convert.ToInt32(Console.ReadLine());
-System.Console.Write("Введите колличество столбцов:");
-int colum = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите колличество столбцов:");
+int column = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите колличество диагоналей:");
+int diagon = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine();
-int [,] arr = NewArray(row, colum);
+int [,,] arr = NewArray(row, column, diagon);
 Console.WriteLine("Пулучаем массив:");
 Console.WriteLine();
 PrintArray(arr);
 Console.WriteLine();
-SortArray (arr);
-Console.WriteLine("Сортируем массив по убыванию:");
-Console.WriteLine();
-PrintArray(SortArray(arr));
 
-int [,] NewArray(int row, int colum)
+
+
+int [,,] NewArray(int row, int column, int diagon)
 {
-    int [,] newArray = new int [row, colum];
-    Random rnd = new Random();
+    int [,,] newArray = new int [row, column, diagon];
+    int ctr = 10;
     for (int i = 0; i < newArray.GetLength(0); i++)
     {
         for (int j = 0; j < newArray.GetLength(1); j++)
         {
-            newArray[i,j] = rnd.Next(1,100);
+            for (int k = 0; k < newArray.GetLength(2); k++)
+            {
+                newArray[i,j,k] = ctr++;
+            }
         }
     }
     return newArray;
 }
 
-void PrintArray (int [,] array)
+void PrintArray (int [,,] array)
 {
-for (int i = 0; i < array.GetLength(0); i++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            Console.Write($"{array[i,j]}\t");
+            for (int k = 0; k < array.GetLength(2); k++)
+            {
+                Console.Write($"{array[i,j,k] }\t");
+            }
         }
         Console.WriteLine();
     }
