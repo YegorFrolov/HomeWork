@@ -66,7 +66,6 @@ void ElementNumber (double [,] array, int numstr, int numcolon)
             }
         }
     }
-    
 }
 
 
