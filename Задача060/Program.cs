@@ -4,11 +4,11 @@
 */ 
 
 Console.Clear();
-Console.Write("Введите колличество строк:");
+Console.Write("Введите количество строк:");
 int row = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите колличество столбцов:");
+Console.Write("Введите количество столбцов:");
 int column = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите колличество диагоналей:");
+Console.Write("Введите количество диагоналей:");
 int diagon = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine();
@@ -45,8 +45,9 @@ void PrintArray (int [,,] array)
         {
             for (int k = 0; k < array.GetLength(2); k++)
             {
-                Console.Write($"{array[i,j,k] }\t");
+                Console.Write($"{array[i,j,k]} [{i},{j},{k}] \t");
             }
+            Console.WriteLine();
         }
         Console.WriteLine();
     }
