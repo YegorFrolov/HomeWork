@@ -8,7 +8,7 @@ Console.Write("Введите количество строк:");
 int row = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите количество столбцов:");
 int column = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите количество диагоналей:");
+Console.Write("Введите глубину:");
 int diagon = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine();
@@ -35,6 +35,21 @@ int [,,] NewArray(int row, int column, int diagon)
     return newArray;
 }
 
+void PrintArray (int [,,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            for (int k = 0; k < array.GetLength(2); k++)
+            {
+                Console.Write($"{array[i,j,k]} [{i},{j},{k}] \t");
+            }
+            Console.WriteLine();
+        }
+        Console.WriteLine();
+    }
+}
 void PrintArray (int [,,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
