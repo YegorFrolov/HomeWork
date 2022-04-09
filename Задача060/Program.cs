@@ -18,8 +18,6 @@ Console.WriteLine();
 PrintArray(arr);
 Console.WriteLine();
 
-
-
 int [,,] NewArray(int row, int column, int diagon)
 {
     int [,,] newArray = new int [row, column, diagon];
